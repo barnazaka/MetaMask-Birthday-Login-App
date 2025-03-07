@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2a4066, #4a1e4a);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 60px rgba(0, 255, 255, 0.5),
+              0 0 40px rgba(255, 111, 97, 0.5),
+              0 0 20px rgba(255, 204, 0, 0.5);
+    text-align: center;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.login-box h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #00ffcc, #ff6f61, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.login-box p {
+    color: #ffffff;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.login-box button {
+    background: linear-gradient(45deg, #ff6f61, #de4d4d, #ffcc00, #00ffcc);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #ffffff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 20px rgba(255, 111, 97, 0.7),
+                0 0 15px rgba(0, 255, 204, 0.7);
+}
+
+.login-box button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 111, 97, 1),
+                0 0 25px rgba(0, 255, 204, 1),
+                0 0 20px rgba(255, 204, 0, 1);
+}
+
+.background-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 204, 0.2),
+                              rgba(255, 111, 97, 0.2),
+                              rgba(255, 204, 0, 0.2),
+                              transparent);
+    animation: pulse 8s infinite;
+}
+
+/* Success Page Styles */
+.success-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0a0a23;
+    color: #fff;
+    position: relative;
+}
+
+.profile-section {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+#profilePic {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 3px solid #00ffcc; /* Cyan border */
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.8), /* Glowing effect */
+                0 0 40px rgba(255, 111, 97, 0.5);
+}
+
+#profilePic:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 30px rgba(0, 255, 204, 1),
+                0 0 50px rgba(255, 111, 97, 0.7);
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    text-align: center;
+}
+
+.profile-dropdown.active {
+    display: block; /* Show when active class is added */
+}
+
+.wallet-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5),
+                0 0 15px rgba(255, 204, 0, 0.5);
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 255, 204, 0.7);
+}
+
+#walletAddress {
+    color: #00ffcc;
+    font-size: 1.1em;
+    white-space: nowrap; /* Keeps address in a straight line */
+    max-width: 250px; /* Limits width but no wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds "..." if too long */
+}
+
+#logoutBtn {
+    background: linear-gradient(45deg, #ff6f61, #de4d4d, #ffcc00);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ffffff;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 15px rgba(255, 111, 97, 0.7);
+}
+
+#logoutBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 111, 97, 1),
+                0 0 20px rgba(255, 204, 0, 0.8);
+}
+
+#successMessage {
+    font-size: 3em;
+    background: linear-gradient(90deg, #ff6f61, #00ffcc);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+}
+
+#birthdayWishes {
+    text-align: center;
+    font-size: 1.2em;
+    max-width: 600px;
+}
+
+#birthdayWishes p {
+    margin: 10px 0;
+    color: #fff;
+}
+
+#balloons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.3); opacity: 0.3; }
+    100% { transform: scale(1); opacity: 0.6; }
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
+}

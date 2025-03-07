@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="success-container">
+        <div class="profile-section">
+            <img id="profilePic" src="https://img.icons8.com/color/64/000000/user.png" alt="Profile">
+            <div class="profile-dropdown">
+                <div class="wallet-box">
+                    <p id="walletAddress"></p>
+                </div>
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </div>
+        <h1 id="successMessage">Happy Birthday to You!!!!!</h1>
+        <div id="birthdayWishes">
+            <p>Enjoy your special day on the blockchain!</p>
+            <p>¡Feliz cumpleaños desde la Web3! (Spanish)</p>
+            <p>Joyeux anniversaire, crypto-star! (French)</p>
+            <p>Bon anniversaire, hodler extraordinaire! (Web3 French)</p>
+            <p>May your wallet be full of gas and gains!</p>
+        </div>
+        <div id="balloons"></div>
+    </div>
+    <script src="/script.js"></script>
+    <script>
+        window.onload = function() {
+            createBalloons();
+            setupProfile();
+        };
+    </script>
+</body>
+</html>
